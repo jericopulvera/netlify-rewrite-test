@@ -5,7 +5,7 @@
   command = "next build && next export"
 
 [[redirects]]
-  from = /users/*
-  to = /users/[id].html
+  from = "/users/*"
+  to = "/users/[id].html"
   status = 200
   force = true
