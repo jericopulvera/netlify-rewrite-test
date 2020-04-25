@@ -9,3 +9,8 @@
   to = "/users/[id].html"
   status = 200
   force = true
+
+  from = "/account/activate/*"
+  to = "/account/activate/[token].html"
+  status = 200
+  force = true
