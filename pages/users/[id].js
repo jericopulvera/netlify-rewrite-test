@@ -24,7 +24,7 @@ export default function Page({ url }) {
           <input id="userId" value={userId} onChange={e => setUserId(e.target.value)}></input>
         </label>
 
-        <button type="button" onClick={() => router.push(`/users/${userId}`)}>Go to user {userId}</button>
+        <button type="button" onClick={() => router.push('/users/[id]', `/users/${userId}`)}>Go to user {userId}</button>
       </div>
   )
 }
