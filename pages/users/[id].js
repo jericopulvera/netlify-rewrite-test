@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Layout from '../../components/Layout';
 
 export default function Page({ url }) {
   const router = useRouter()
@@ -12,19 +12,16 @@ export default function Page({ url }) {
   }, [])
 
   return (
-      <div>
-         <Link href="/">
-            <a>Go Back</a>
-        </Link>
+    <Layout>
 
-        <div>User {url.query.id} </div>
+      <div>User {url.query.id} </div>
 
-        <label for="userId">
-          User Id
-          <input id="userId" value={userId} onChange={e => setUserId(e.target.value)}></input>
-        </label>
+      <label for="userId">
+        User Id
+        <input id="userId" value={userId} onChange={e => setUserId(e.target.value)}></input>
+      </label>
 
-        <button type="button" onClick={() => router.push('/users/[id]', `/users/${userId}`)}>Go to user {userId}</button>
-      </div>
+      <button type="button" onClick={() => router.push('/users/[id]', `/users/${userId}`)}>Go to user {userId}</button>
+    </Layout>
   )
 }

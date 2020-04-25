@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
-
+import Layout from '../../../components/Layout';
 
 export default () => {
      const router = useRouter()
 
-     if (!router.query.token) return <h1>Not working</h1>
+     if (!router.query.token) return <Layout><h1>Not working</h1></Layout>
 
-     return <h1>{router.query.token}</h1>
+     return <Layout><h1>{router.query.token}</h1></Layout>
 }
